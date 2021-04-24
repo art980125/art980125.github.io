@@ -28,7 +28,7 @@ nav {
 		img {
 			width: 68px;
 			height: 40px;
-			margin: 0 8px 0 0;
+			margin: 0 8px 0 0px;
 		}
 		p {
 			color: #303031;
@@ -52,6 +52,7 @@ nav {
 		}
 		a.active {
 			color: #71a894;
+			margin: 0px;
 		}
 	}
 }
@@ -63,7 +64,7 @@ nav {
 	background-image: url(../img/Right_Column.png);
 	background-repeat: no-repeat;
 	background-position-x: right;
-	background-size: 50%;
+	background-size: calc(min(800px, 50%));
 	align-items: center;
 	.container_content {
 		width: 100%;
@@ -707,6 +708,32 @@ button {
 			line-height: 24px;
 			letter-spacing: -0.02em;
 			color: #71a894;
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.main_container {
+		background-image: none;
+		margin-left: 0px;
+	}
+	.container_content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		text-align: center;
+		.early_access {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+	}
+	.early_access {
+		text-align: center;
+		h2 {
+			text-align: center !important;
 		}
 	}
 }

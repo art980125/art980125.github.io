@@ -139,7 +139,7 @@ nav .logo {
 nav .logo img {
   width: 68px;
   height: 40px;
-  margin: 0 8px 0 0;
+  margin: 0 8px 0 0px;
 }
 
 nav .logo p {
@@ -169,6 +169,7 @@ nav .navigations a {
 
 nav .navigations a.active {
   color: #71a894;
+  margin: 0px;
 }
 
 .main_container {
@@ -181,7 +182,7 @@ nav .navigations a.active {
   background-image: url(../img/Right_Column.png);
   background-repeat: no-repeat;
   background-position-x: right;
-  background-size: 50%;
+  background-size: calc(min(800px, 50%));
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1113,4 +1114,44 @@ button {
   line-height: 24px;
   letter-spacing: -0.02em;
   color: #71a894;
+}
+
+@media (max-width: 1170px) {
+  .main_container {
+    background-image: none;
+    margin-left: 0px;
+  }
+  .container_content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: center;
+  }
+  .container_content .early_access {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 20px;
+  }
+  .early_access {
+    text-align: center;
+  }
+  .early_access h2 {
+    text-align: center !important;
+  }
 }
